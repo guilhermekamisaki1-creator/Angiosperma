@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Angiospermas — Aula Completa de Biologia | Vestibular</title>
+<style>
+:root{
+  --azul-escuro:#0b3d6b;
+  --azul:#1565c0;
+  --azul-claro:#3a8dde;
+  --azul-bg:#eaf3fb;
+  --verde:#2e7d4f;
+  --verde-claro:#e3f3e9;
+  --laranja:#e8a33d;
+  --laranja-bg:#fdf3e2;
+  --vermelho:#c0392b;
+  --vermelho-bg:#fdecea;
+  --roxo:#6a3d9c;
+  --roxo-bg:#f0e9f8;
+  --cinza-texto:#2c3640;
+  --cinza-claro:#f4f7fa;
+  --borda:#d6e2ee;
+  --sombra:0 4px 18px rgba(11,61,107,.10);
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  color:var(--cinza-texto);
+  background:var(--cinza-claro);
+  line-height:1.7;
+  font-size:17px;
+}
+/* ---------- CABEÇALHO ---------- */
+header.topo{
+  background:linear-gradient(135deg,var(--azul-escuro) 0%,var(--azul) 55%,var(--azul-claro) 100%);
+  color:#fff;
+  padding:46px 22px 54px;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+}
+header.topo::after{
+  content:"";position:absolute;right:-60px;top:-60px;
+  width:240px;height:240px;background:rgba(255,255,255,.07);
+  transform:rotate(35deg);
+}
+header.topo .tag{
+  display:inline-block;background:rgba(255,255,255,.18);
+  padding:5px 16px;border-radius:30px;font-size:.8rem;
+  letter-spacing:1.5px;text-transform:uppercase;margin-bottom:14px;
+}
+header.topo h1{font-size:2.6rem;font-weight:800;letter-spacing:.5px;}
+header.topo p.sub{font-size:1.1rem;opacity:.92;margin-top:8px;}
+header.topo p.meta{font-size:.85rem;opacity:.75;margin-top:14px;}
+
+/* ---------- NAVEGAÇÃO ---------- */
+nav.indice{
+  background:#fff;border-bottom:1px solid var(--borda);
+  padding:14px 18px;position:sticky;top:0;z-index:50;
+  box-shadow:0 2px 10px rgba(0,0,0,.05);
+}
+nav.indice .wrap{max-width:1080px;margin:0 auto;display:flex;flex-wrap:wrap;gap:8px;justify-content:center;}
+nav.indice a{
+  text-decoration:none;color:var(--azul-escuro);
+  font-size:.82rem;font-weight:600;padding:6px 12px;
+  border-radius:20px;background:var(--azul-bg);transition:.2s;
+}
+nav.indice a:hover{background:var(--azul);color:#fff;}
+
+/* ---------- LAYOUT ---------- */
+main{max-width:1080px;margin:0 auto;padding:34px 20px 60px;}
+section{
+  background:#fff;border-radius:16px;box-shadow:var(--sombra);
+  padding:34px 32px;margin-bottom:30px;border:1px solid var(--borda);
+}
+section h2{
+  font-size:1.7rem;color:var(--azul-escuro);
+  border-bottom:3px solid var(--azul-claro);
+  padding-bottom:10px;margin-bottom:8px;display:flex;align-items:center;gap:12px;
+}
+section h2 .num{
+  background:var(--azul);color:#fff;font-size:1rem;
+  width:38px;height:38px;border-radius:50%;
+  display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;
+}
+section h3{
+  font-size:1.22rem;color:var(--azul);margin:26px 0 10px;
+  padding-left:12px;border-left:5px solid var(--laranja);
+}
+section h4{font-size:1.05rem;color:var(--azul-escuro);margin:18px 0 6px;}
+p{margin:10px 0;}
+ul,ol{margin:10px 0 10px 26px;}
+li{margin:6px 0;}
+strong{color:var(--azul-escuro);}
+em.termo{font-style:normal;font-weight:700;color:var(--vermelho);}
+.intro{font-size:1.05rem;color:#48586a;margin-bottom:6px;}
+
+/* ---------- CAIXAS DE DESTAQUE ---------- */
+.caixa{border-radius:12px;padding:18px 20px;margin:18px 0;border-left:6px solid;}
+.caixa .titulo{font-weight:800;display:block;margin-bottom:6px;font-size:1rem;text-transform:uppercase;letter-spacing:.5px;}
+.def{background:var(--azul-bg);border-color:var(--azul);}
+.def .titulo{color:var(--azul-escuro);}
+.atencao{background:var(--vermelho-bg);border-color:var(--vermelho);}
+.atencao .titulo{color:var(--vermelho);}
+.prova{background:var(--laranja-bg);border-color:var(--laranja);}
+.prova .titulo{color:#b9791a;}
+.complemento{background:var(--verde-claro);border-color:var(--verde);}
+.complemento .titulo{color:var(--verde);}
+.dica{background:var(--roxo-bg);border-color:var(--roxo);}
+.dica .titulo{color:var(--roxo);}
+
+/* ---------- ESQUEMAS / FLUXOS ---------- */
+.fluxo{
+  display:flex;flex-wrap:wrap;align-items:center;gap:8px;
+  background:var(--cinza-claro);border:1px dashed var(--azul-claro);
+  border-radius:12px;padding:18px;margin:18px 0;justify-content:center;
+}
+.fluxo .passo{
+  background:#fff;border:2px solid var(--azul);border-radius:10px;
+  padding:8px 14px;font-weight:700;color:var(--azul-escuro);
+  font-size:.9rem;text-align:center;box-shadow:0 2px 6px rgba(0,0,0,.06);
+}
+.fluxo .seta{color:var(--laranja);font-size:1.5rem;font-weight:900;}
+.fluxo .passo.verde{border-color:var(--verde);color:var(--verde);}
+.fluxo .passo.roxo{border-color:var(--roxo);color:var(--roxo);}
+.fluxo .passo.vermelho{border-color:var(--vermelho);color:var(--vermelho);}
+
+/* ---------- CLADOGRAMA EM TEXTO ---------- */
+.clado{
+  background:#fdfaf0;border:1px solid var(--laranja);
+  border-radius:12px;padding:20px;margin:18px 0;font-size:.92rem;
+}
+.clado .nivel{margin:4px 0;padding:7px 12px;border-radius:8px;}
+.clado .marca{
+  display:inline-block;background:var(--vermelho);color:#fff;
+  font-size:.78rem;font-weight:700;padding:3px 10px;border-radius:14px;margin:3px 4px;
+}
+.clado .grupo{
+  display:inline-block;background:var(--laranja);color:#3a2a05;
+  font-weight:700;padding:4px 11px;border-radius:8px;margin:3px 3px;font-size:.85rem;
+}
+.clado .grupo.destaque{background:var(--verde);color:#fff;}
+
+/* ---------- TABELAS ---------- */
+.tabela-wrap{overflow-x:auto;margin:18px 0;}
+table{width:100%;border-collapse:collapse;font-size:.93rem;min-width:520px;}
+caption{font-weight:700;color:var(--azul-escuro);margin-bottom:8px;text-align:left;}
+th,td{border:1px solid var(--borda);padding:10px 12px;text-align:left;vertical-align:top;}
+thead th{background:var(--azul);color:#fff;font-size:.9rem;}
+tbody tr:nth-child(even){background:var(--azul-bg);}
+td.crit{font-weight:700;background:var(--cinza-claro);color:var(--azul-escuro);}
+.mono-col{background:var(--verde-claro)!important;}
+.dico-col{background:var(--laranja-bg)!important;}
+
+/* ---------- CARDS ---------- */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin:18px 0;}
+.card{
+  background:var(--cinza-claro);border:1px solid var(--borda);
+  border-radius:12px;padding:16px;border-top:4px solid var(--azul);
+}
+.card h4{color:var(--azul);margin-top:0;}
+.card.v{border-top-color:var(--verde);} .card.v h4{color:var(--verde);}
+.card.o{border-top-color:var(--laranja);} .card.o h4{color:#b9791a;}
+.card.r{border-top-color:var(--roxo);} .card.r h4{color:var(--roxo);}
+
+/* ---------- GABARITO ATIVIDADE ---------- */
+.gabarito{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:8px;margin:16px 0;}
+.gabarito .item{
+  background:var(--azul-bg);border-radius:8px;padding:8px 12px;
+  font-size:.88rem;display:flex;gap:8px;align-items:flex-start;
+}
+.gabarito .item b{
+  background:var(--azul);color:#fff;border-radius:6px;
+  min-width:26px;height:22px;display:inline-flex;align-items:center;
+  justify-content:center;font-size:.8rem;flex-shrink:0;
+}
+
+/* ---------- VÍDEOS ---------- */
+.video-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin:16px 0;}
+.video-card{
+  background:linear-gradient(135deg,#fff,var(--azul-bg));
+  border:1px solid var(--borda);border-radius:14px;padding:18px;
+  display:flex;flex-direction:column;gap:10px;
+}
+.video-card .canal{font-size:.78rem;color:var(--azul);font-weight:700;text-transform:uppercase;letter-spacing:.5px;}
+.video-card .vtit{font-weight:700;color:var(--azul-escuro);font-size:1rem;line-height:1.4;}
+.video-card .vdesc{font-size:.86rem;color:#5a6b7d;flex-grow:1;}
+.btn-video{
+  display:inline-flex;align-items:center;gap:8px;justify-content:center;
+  background:var(--vermelho);color:#fff;text-decoration:none;
+  font-weight:700;padding:11px 16px;border-radius:30px;font-size:.9rem;
+  transition:.2s;
+}
+.btn-video:hover{background:#9d2f22;transform:translateY(-2px);}
+.btn-video .play{
+  background:#fff;color:var(--vermelho);border-radius:50%;
+  width:22px;height:22px;display:inline-flex;align-items:center;justify-content:center;font-size:.7rem;
+}
+
+/* ---------- REVISÃO FINAL ---------- */
+.revisao{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;}
+.revisao .flash{
+  background:linear-gradient(135deg,var(--azul-escuro),var(--azul));
+  color:#fff;border-radius:12px;padding:16px;
+}
+.revisao .flash b{display:block;color:#ffe39a;margin-bottom:4px;font-size:.95rem;}
+.revisao .flash span{font-size:.88rem;opacity:.95;}
+
+/* ---------- RODAPÉ ---------- */
+footer{
+  background:var(--azul-escuro);color:#cfe0f0;
+  text-align:center;padding:28px 20px;font-size:.85rem;
+}
+footer strong{color:#fff;}
+
+/* ---------- RESPONSIVO ---------- */
+@media(max-width:640px){
+  body{font-size:16px;}
+  header.topo h1{font-size:1.9rem;}
+  section{padding:24px 18px;}
+  section h2{font-size:1.35rem;}
+  .fluxo{padding:12px;}
+}
+.mini{font-size:.8rem;color:#7a8a9a;font-style:italic;}
+.divisor{height:2px;background:linear-gradient(90deg,transparent,var(--azul-claro),transparent);margin:26px 0;border:none;}
+</style>
+</head>
+<body>
+
+<header class="topo">
+  <span class="tag">Biologia &middot; Capítulo B5 &middot; Aulas 10 e 11</span>
+  <h1>Angiospermas</h1>
+  <p class="sub">As plantas com flor e fruto — da evolução ao ciclo reprodutivo</p>
+  <p class="meta">Aula completa para o 2&ordm; ano do Ensino Médio &middot; Preparação para vestibulares concorridos</p>
+</header>
+
+<nav class="indice">
+  <div class="wrap">
+    <a href="#visao">Visão geral</a>
+    <a href="#arvore">Árvore evolutiva</a>
+    <a href="#importancia">Importância das flores</a>
+    <a href="#caracteristicas">Características</a>
+    <a href="#gametofitos">Gametófitos</a>
+    <a href="#ciclo">Ciclo de vida</a>
+    <a href="#cotiledone">Cotilédone</a>
+    <a href="#classificacao">Classificação</a>
+    <a href="#mono">Monocotiledôneas</a>
+    <a href="#eudico">Eudicotiledôneas</a>
+    <a href="#tabela">Mono x Eudico</a>
+    <a href="#atividade">Atividade resolvida</a>
+    <a href="#pegadinhas">Pegadinhas</a>
+    <a href="#videos">Vídeos</a>
+    <a href="#revisao">Revisão final</a>
+  </div>
+</nav>
+
+<main>
+
+<!-- ================= VISÃO GERAL ================= -->
+<section id="visao">
+  <h2><span class="num">1</span>Visão geral do tema</h2>
+  <p class="intro">Antes de entrar nos detalhes, vamos enxergar o tema "de cima". Isso ajuda o cérebro a encaixar cada informação no lugar certo.</p>
+
+  <p>As <strong>angiospermas</strong> são as <strong>plantas com flor e fruto</strong>. Elas representam o grupo de plantas <strong>mais diverso e mais bem-sucedido</strong> do planeta — são as plantas que vemos no dia a dia: o capim do gramado, a árvore da praça, o feijão do prato, a laranja, a rosa, a orquídea.</p>
+
+  <p>O nome entrega a principal característica do grupo. Vem do grego:</p>
+  <div class="fluxo">
+    <div class="passo">angeion = "vaso", "urna"</div>
+    <div class="seta">+</div>
+    <div class="passo">sperma = "semente"</div>
+    <div class="seta">&rarr;</div>
+    <div class="passo verde">semente "guardada" dentro de um vaso (o fruto)</div>
+  </div>
+  <p>Ou seja: nas angiospermas a <strong>semente fica protegida no interior do fruto</strong>. Isso as diferencia das gimnospermas ("sementes nuas", expostas, como nos pinheiros).</p>
+
+  <div class="caixa def">
+    <span class="titulo">As duas grandes novidades evolutivas das angiospermas</span>
+    <strong>FLOR</strong> &rarr; estrutura especializada na reprodução, que atrai polinizadores.<br>
+    <strong>FRUTO</strong> &rarr; estrutura que protege a semente e auxilia na sua dispersão.<br>
+    <span class="mini">Guarde esta dupla: "flor e fruto" é a resposta-padrão para "o que define uma angiosperma?".</span>
+  </div>
+
+  <h3>O roteiro destas duas aulas</h3>
+  <p>Este material reúne o conteúdo das <strong>Aulas 10 e 11</strong> do Capítulo B5 e da <strong>atividade do ciclo reprodutivo</strong>. O caminho de estudo é o seguinte:</p>
+  <div class="fluxo">
+    <div class="passo">Onde as angiospermas estão na evolução das plantas</div>
+    <div class="seta">&rarr;</div>
+    <div class="passo">Por que as flores são tão importantes</div>
+    <div class="seta">&rarr;</div>
+    <div class="passo">Características do grupo</div>
+    <div class="seta">&rarr;</div>
+    <div class="passo">Ciclo de vida e reprodução</div>
+    <div class="seta">&rarr;</div>
+    <div class="passo verde">Classificação: monocotiledôneas e eudicotiledôneas</div>
+  </div>
+</section>
+
+<!-- ================= ÁRVORE EVOLUTIVA ================= -->
+<section id="arvore">
+  <h2><span class="num">2</span>Onde as Angiospermas estão na história evolutiva das plantas</h2>
+  <p class="intro">O slide de abertura da aula traz um <strong>cladograma</strong> — uma "árvore genealógica" que mostra o parentesco evolutivo dos grupos de plantas e algas. Vamos lê-lo passo a passo.</p>
+
+  <div class="caixa def">
+    <span class="titulo">O que é um cladograma?</span>
+    É um diagrama em forma de árvore que mostra <strong>relações de parentesco evolutivo</strong>. Cada "marca" sobre um ramo indica o surgimento de uma <strong>novidade evolutiva</strong> (uma característica nova). Todos os grupos acima dessa marca herdam essa característica.
+  </div>
+
+  <h3>O grande clado de origem: Archaeplastida (Primoplantae)</h3>
+  <p>Tudo começa com um evento extraordinário: a <strong>endossimbiose primária</strong>.</p>
+  <div class="fluxo">
+    <div class="passo">Célula eucarionte ancestral</div>
+    <div class="seta">+</div>
+    <div class="passo">Cianobactéria (engolida)</div>
+    <div class="seta">&rarr;</div>
+    <div class="passo verde">Cloroplasto &rarr; surge o grupo Archaeplastida</div>
+  </div>
+  <p>Uma célula eucarionte "engoliu" uma <strong>cianobactéria</strong> fotossintetizante. Em vez de digeri-la, passou a viver em parceria com ela. Com o tempo, essa cianobactéria virou uma organela: o <strong>cloroplasto</strong>. Esse grupo recebe o nome de <strong>Archaeplastida</strong> ou <strong>Primoplantae</strong>.</p>
+
+  <h4>A sequência de novidades evolutivas (de baixo para cima no cladograma)</h4>
+  <div class="clado">
+    <div class="nivel"><span class="marca">1</span> Endossimbiose primária com cianobactéria <span class="mini">&rarr; origem do cloroplasto</span></div>
+    <div class="nivel"><span class="marca">2</span> Perda da parede celular da cianobactéria</div>
+    <div class="nivel"><span class="marca">3</span> + Clorofila <em>b</em> <span class="mini">&rarr; surge o grupo Viridiplantae (as "plantas verdes" + algas verdes)</span></div>
+    <div class="nivel"><span class="marca">4</span> Conquista do ambiente terrestre + embrião <span class="mini">&rarr; surgem as EMBRIÓFITAS</span></div>
+    <div class="nivel"><span class="marca">5</span> Vasos condutores de seiva <span class="mini">&rarr; plantas vasculares</span></div>
+    <div class="nivel"><span class="marca">6</span> Semente + grão de pólen</div>
+    <div class="nivel"><span class="marca">7</span> Flor e fruto <span class="mini">&rarr; surgem as ANGIOSPERMAS</span></div>
+  </div>
+
+  <div class="caixa atencao">
+    <span class="titulo">Atenção — leia o cladograma como uma escada de conquistas</span>
+    Cada marca é uma "vitória" evolutiva que <strong>se acumula</strong>. As angiospermas, por estarem no topo, possuem <strong>todas</strong> as novidades: cloroplasto, clorofila <em>b</em>, embrião, vasos condutores, semente, grão de pólen <strong>e</strong> flor/fruto. É por isso que são as plantas mais "completas" e bem-sucedidas.
+  </div>
+
+  <h3>Embriófitas: o conceito-chave</h3>
+  <div class="caixa def">
+    <span class="titulo">Embriófitas</span>
+    São as <strong>plantas terrestres</strong> — definidas como o grupo de plantas que <strong>forma um embrião multicelular</strong>. O embrião é uma plantinha jovem que fica protegida e nutrida dentro da planta-mãe.<br>
+    <strong>Quatro grandes grupos de embriófitas:</strong> "Briófitas", "Pteridófitas", "Gimnospermas" e <strong>Angiospermas</strong>.
+  </div>
+  <p class="mini">As aspas em "Briófitas", "Pteridófitas" e "Gimnospermas" indicam que esses são nomes <em>tradicionais</em>, mas que esses grupos não são clados "perfeitos" (monofiléticos) na classificação moderna. As angiospermas, ao contrário, formam um grupo monofilético — voltaremos a isso.</p>
+
+  <h4>Os grupos que aparecem no cladograma completo</h4>
+  <div class="cards">
+    <div class="card">
+      <h4>Algas (não-embriófitas)</h4>
+      <p>Glaucófitas, Rodofíceas (algas vermelhas — possuem <em>ficobilinas</em>), Clorofíceas (algas verdes) e Carofíceas.</p>
+    </div>
+    <div class="card v">
+      <h4>"Briófitas"</h4>
+      <p>Marchantiophyta, Anthocerophyta e Bryophyta. Plantas terrestres avasculares (sem vasos condutores).</p>
+    </div>
+    <div class="card o">
+      <h4>"Pteridófitas"</h4>
+      <p>Lycophyta e Monilophyta. Primeiras plantas vasculares; ainda sem semente.</p>
+    </div>
+    <div class="card r">
+      <h4>"Gimnospermas" e Angiospermas</h4>
+      <p>Gimnospermas: Ginkgophyta, Cycadophyta, Coniferophyta e Gnetophyta. <strong>Angiospermas</strong>: o ramo do topo, único com flor e fruto.</p>
+    </div>
+  </div>
+
+  <div class="caixa complemento">
+    <span class="titulo">Complemento para melhor compreensão</span>
+    As <strong>ficobilinas</strong>, citadas para as algas vermelhas (rodofíceas), são pigmentos acessórios que captam luz em profundidades onde a luz vermelha não chega — por isso essas algas conseguem viver mais fundo no mar. Isso não estava detalhado no slide, mas explica por que o pigmento é destacado nesse ramo.
+  </div>
+</section>
+
+<!-- ================= IMPORTÂNCIA DAS FLORES ================= -->
+<section id="importancia">
+  <h2><span class="num">3</span>A importância das flores — biológica, econômica e cultural</h2>
+  <p class="intro">Boa parte da Aula 10 é uma sequência de imagens mostrando o quanto as flores (e, portanto, as angiospermas) estão presentes na vida humana. Esse "passeio visual" tem um objetivo: mostrar que estudar angiospermas é estudar algo central para a nossa civilização.</p>
+
+  <h3>Importância biológica e ecológica</h3>
+  <ul>
+    <li><strong>Polinização:</strong> a imagem clássica da <strong>abelha coberta de pólen</strong> resume a função ecológica da flor — atrair animais polinizadores. A flor "paga" o polinizador com néctar e pólen, e em troca tem seu pólen transportado.</li>
+    <li><strong>Base das cadeias alimentares e da agricultura:</strong> frutas, grãos, hortaliças — quase todo o nosso alimento de origem vegetal vem de angiospermas.</li>
+    <li><strong>Diversidade extrema:</strong> a aula mostra desde a minúscula <em>Galinsoga parviflora</em> (uma "erva daninha" comum) até a gigantesca <em>Amorphophallus titanum</em>, que produz uma das maiores inflorescências do mundo.</li>
+  </ul>
+
+  <h3>Importância econômica</h3>
+  <ul>
+    <li><strong>Floricultura e ornamentação:</strong> arranjos, decoração de interiores, jardins e praças. A aula cita cidades como <strong>Holambra</strong> (polo de flores em SP) e os campos de <strong>lavanda de Cunha</strong>.</li>
+    <li><strong>Paisagismo:</strong> jardins ornamentais, canteiros e labirintos de plantas.</li>
+  </ul>
+
+  <h3>Importância cultural e simbólica</h3>
+  <p>As flores carregam significados em praticamente todos os momentos marcantes da vida humana:</p>
+  <div class="cards">
+    <div class="card">
+      <h4>Afeto e celebração</h4>
+      <p>Presentes, pedidos de casamento, festas, formaturas — a flor como símbolo de carinho e de momentos especiais.</p>
+    </div>
+    <div class="card o">
+      <h4>Religião e luto</h4>
+      <p>Decoração de igrejas e cerimônias; coroas de flores em funerais ("saudade dos familiares e amigos").</p>
+    </div>
+    <div class="card r">
+      <h4>Heráldica e símbolos</h4>
+      <p>A <strong>flor de lis</strong> (símbolo de realeza e do escotismo) e a <strong>flor de lótus</strong> (símbolo espiritual no budismo e hinduísmo).</p>
+    </div>
+    <div class="card v">
+      <h4>Arte, cinema e política</h4>
+      <p>As pinturas de <strong>Giuseppe Arcimboldo</strong> (rostos feitos de flores e frutos); filmes como "Amor Além da Vida" e "A Bela e a Fera" (a rosa encantada); e a flor como símbolo de paz no movimento <em>flower power</em>.</p>
+    </div>
+  </div>
+
+  <div class="caixa dica">
+    <span class="titulo">Como cobrar isso na prova</span>
+    Vestibulares raramente cobram "decoração cultural" diretamente. Mas adoram o conceito de <strong>coevolução flor–polinizador</strong>: a forma, a cor, o cheiro e o néctar da flor evoluíram <em>junto</em> com os animais que a visitam. Flores vistosas e perfumadas = polinização por animais; flores discretas e sem perfume = polinização pelo vento (anemofilia).
+  </div>
+</section>
+
+<!-- ================= CARACTERÍSTICAS ================= -->
+<section id="caracteristicas">
+  <h2><span class="num">4</span>As características das Angiospermas</h2>
+  <p class="intro">Este é o coração teórico da aula. Cada termo abaixo é peça de prova. Vamos definir todos com calma — do mais simples ao mais avançado.</p>
+
+  <div class="caixa def">
+    <span class="titulo">Grupo monofilético</span>
+    As angiospermas formam um <strong>grupo monofilético</strong>: isto é, incluem um ancestral comum <strong>e todos os seus descendentes</strong>. Recebem dois nomes científicos equivalentes: filo <strong>Magnoliophyta</strong> ou <strong>Antophyta</strong> ("plantas com flor").<br>
+    <span class="mini">Contraste: "briófitas", "pteridófitas" e "gimnospermas" NÃO são monofiléticos — por isso vão entre aspas. Angiospermas são "de verdade" um clado.</span>
+  </div>
+
+  <h3>Lista das características (slide-resumo da aula)</h3>
+  <div class="cards">
+    <div class="card">
+      <h4>Plantas vasculares</h4>
+      <p>Possuem <strong>xilema</strong> (conduz seiva bruta: água + sais) e <strong>floema</strong> (conduz seiva elaborada: açúcares). Os vasos permitem que a planta cresça e seja independente da água do ambiente.</p>
+    </div>
+    <div class="card o">
+      <h4>Flor</h4>
+      <p>Estrutura reprodutiva exclusiva e definidora. É um ramo modificado com folhas especializadas (sépalas, pétalas, estames, carpelos).</p>
+    </div>
+    <div class="card r">
+      <h4>Heterosporia</h4>
+      <p>Produzem <strong>dois tipos de esporos</strong>: o <em>micrósporo</em> (origina o gametófito masculino) e o <em>megásporo</em> (origina o gametófito feminino).</p>
+    </div>
+    <div class="card v">
+      <h4>Endosporia</h4>
+      <p>O gametófito se desenvolve <strong>dentro do esporo</strong> (de forma protegida), e não livre no ambiente. Reduz a dependência da água.</p>
+    </div>
+    <div class="card">
+      <h4>Grão-de-pólen</h4>
+      <p>É o <strong>gametófito masculino</strong>. Pequeno, resistente e transportável pelo vento ou por animais — leva os gametas masculinos sem precisar de água.</p>
+    </div>
+    <div class="card o">
+      <h4>Sifonogamia</h4>
+      <p>Fecundação por meio de um <strong>tubo polínico</strong> ("sifão"). O gameta masculino caminha até a oosfera <strong>sem precisar de água</strong> — só nadando dentro do tubo.</p>
+    </div>
+    <div class="card r">
+      <h4>Dupla fecundação</h4>
+      <p>Característica <strong>exclusiva</strong> das angiospermas: ocorrem <strong>duas fecundações</strong> ao mesmo tempo (detalhada mais abaixo).</p>
+    </div>
+    <div class="card v">
+      <h4>Semente com endosperma</h4>
+      <p>A semente já vem com um tecido nutritivo, o <strong>endosperma</strong> (3n), que alimenta o embrião na germinação.</p>
+    </div>
+    <div class="card">
+      <h4>Fruto</h4>
+      <p>Desenvolve-se a partir do <strong>ovário</strong> da flor. Protege a semente e auxilia na sua dispersão.</p>
+    </div>
+  </div>
+
+  <div class="caixa def">
+    <span class="titulo">Por que sifonogamia é tão importante? (entenda a lógica)</span>
+    Nas briófitas e pteridófitas, o gameta masculino é um <strong>anterozoide flagelado que nada</strong> — por isso essas plantas <strong>dependem da água</strong> para a fecundação. Nas angiospermas, o tubo polínico leva o gameta direto até a oosfera. Resultado: a reprodução se torna <strong>independente do ambiente aquático</strong>. Essa é a chave do sucesso das angiospermas em ambientes secos.
+  </div>
+
+  <h3>A dupla fecundação — passo a passo</h3>
+  <p>O grão-de-pólen, ao germinar, forma o tubo polínico e libera <strong>dois núcleos espermáticos</strong> (dois gametas masculinos). Cada um tem um destino:</p>
+  <div class="fluxo">
+    <div class="passo verde">1&ordm; gameta (n)<br>+ oosfera (n)</div>
+    <div class="seta">&rarr;</div>
+    <div class="passo verde">ZIGOTO (2n)<br>&rarr; vira embrião</div>
+    <div class="passo roxo">2&ordm; gameta (n)<br>+ 2 núcleos polares (n+n)</div>
+    <div class="seta">&rarr;</div>
+    <div class="passo roxo">núcleo TRIPLOIDE (3n)<br>&rarr; vira endosperma</div>
+  </div>
+
+  <div class="caixa atencao">
+    <span class="titulo">Pegadinha clássica de vestibular — ploidias da semente</span>
+    Memorize as três ploidias e suas origens:<br>
+    &bull; <strong>Embrião = 2n (diploide)</strong> &rarr; vem do zigoto (gameta + oosfera).<br>
+    &bull; <strong>Endosperma = 3n (triploide)</strong> &rarr; vem do gameta + os 2 núcleos polares.<br>
+    &bull; <strong>Tegumento/casca da semente = 2n</strong> &rarr; vem dos tegumentos do óvulo (tecido da planta-mãe).<br>
+    A banca adora trocar essas origens. O endosperma das angiospermas é <strong>3n</strong> — não confunda com o endosperma das gimnospermas, que é <strong>n</strong> (é o próprio gametófito feminino, sem fecundação).
+  </div>
+
+  <h3>Exemplos de angiospermas citados na aula</h3>
+  <p>O slide de características ilustra a diversidade com vários gêneros: <em>Amborella</em> (considerada a linhagem mais antiga das angiospermas viventes), <em>Nymphaea</em> (a vitória-régia e plantas aquáticas), <em>Austrobaileya</em>, <em>Magnolia</em>, <em>Ceratophyllum</em> (planta aquática submersa), <em>Fragaria</em> (o morangueiro) e <em>Lilium</em> (o lírio).</p>
+</section>
+
+<!-- ================= GAMETÓFITOS ================= -->
+<section id="gametofitos">
+  <h2><span class="num">5</span>Os gametófitos: masculino e feminino</h2>
+  <p class="intro">As micrografias da aula mostram, ao microscópio, as estruturas reprodutivas reais. Vamos traduzir o que cada imagem representa.</p>
+
+  <div class="caixa def">
+    <span class="titulo">Lembre-se: gametófito x esporófito</span>
+    <strong>Esporófito</strong> = a planta adulta, diploide (2n), que produz esporos.<br>
+    <strong>Gametófito</strong> = a fase haploide (n), que produz gametas. Nas angiospermas o gametófito é <strong>minúsculo e dependente</strong> do esporófito.
+  </div>
+
+  <h3>Gametófito masculino — o grão-de-pólen</h3>
+  <p>As imagens mostram grãos-de-pólen de várias espécies — esferas com superfície ornamentada (espinhos, reticulados, poros). Essa parede externa resistente chama-se <strong>exina</strong>.</p>
+  <div class="caixa def">
+    <span class="titulo">Estrutura do grão-de-pólen</span>
+    &bull; <strong>Exina:</strong> parede externa resistente, com ornamentações características de cada espécie (a exina é tão específica que permite identificar a planta — base da palinologia).<br>
+    &bull; <strong>Célula do tubo (auxiliar):</strong> ao germinar, forma o <em>tubo polínico</em>.<br>
+    &bull; <strong>Célula germinativa (geradora):</strong> divide-se e origina os <strong>2 gametas masculinos</strong>.
+  </div>
+  <p>As micrografias do <strong>tubo polínico</strong> mostram o grão-de-pólen germinado: um longo prolongamento crescendo em direção ao óvulo. É o "caminho" da sifonogamia.</p>
+
+  <h3>Gametófito feminino — o saco embrionário</h3>
+  <p>Dentro do óvulo (que fica protegido no ovário) desenvolve-se o gametófito feminino, também chamado <strong>saco embrionário</strong> ou megagametófito.</p>
+  <div class="caixa def">
+    <span class="titulo">A "fórmula" do gametófito feminino: 7 células e 8 núcleos</span>
+    Esta é uma das frases mais cobradas do tema. O saco embrionário maduro típico tem <strong>7 células</strong> e <strong>8 núcleos</strong>:
+    <ul>
+      <li><strong>1 oosfera</strong> — o gameta feminino (que será fecundado &rarr; zigoto).</li>
+      <li><strong>2 sinérgides</strong> — células auxiliares ao lado da oosfera; orientam o tubo polínico.</li>
+      <li><strong>3 antípodas</strong> — células no polo oposto; geralmente degeneram.</li>
+      <li><strong>1 célula central com 2 núcleos polares</strong> — é uma única célula, mas com dois núcleos. Esses 2 núcleos, somados ao 2&ordm; gameta, formam o endosperma 3n.</li>
+    </ul>
+    Conta: 1 + 2 + 3 + 1 = <strong>7 células</strong>. Núcleos: 1 + 2 + 3 + 2 = <strong>8 núcleos</strong> (a célula central tem 2). Essa é a razão da frase "7 células e 8 núcleos".
+  </div>
+
+  <div class="caixa atencao">
+    <span class="titulo">Erro frequente</span>
+    Muitos alunos contam "8 células". O número de <strong>células</strong> é 7; o número de <strong>núcleos</strong> é 8. A diferença existe porque a <strong>célula central</strong> é uma só célula que contém <strong>dois</strong> núcleos polares.
+  </div>
+</section>
+
+<!-- ================= CICLO DE VIDA ================= -->
+<section id="ciclo">
+  <h2><span class="num">6</span>O ciclo de vida das Angiospermas</h2>
+  <p class="intro">O slide final da Aula 10 traz o ciclo de vida. Ele é do tipo <strong>haplodiplobionte</strong> — vamos entender exatamente o que isso significa.</p>
+
+  <div class="caixa def">
+    <span class="titulo">Ciclo haplodiplobionte (ou metagênese / alternância de gerações)</span>
+    É um ciclo em que existem <strong>duas fases multicelulares alternadas</strong>:<br>
+    &bull; uma fase <strong>haploide (n)</strong> &rarr; o <strong>gametófito</strong>;<br>
+    &bull; uma fase <strong>diploide (2n)</strong> &rarr; o <strong>esporófito</strong>.<br>
+    Por isso o nome: <em>haplo</em> (haploide) + <em>diplo</em> (diploide) + <em>bionte</em> (fase de vida).
+  </div>
+
+  <h3>O ciclo, passo a passo</h3>
+  <div class="fluxo">
+    <div class="passo">Esporófito (2n)</div>
+    <div class="seta">&rarr;</div>
+    <div class="passo vermelho">MEIOSE espórica</div>
+    <div class="seta">&rarr;</div>
+    <div class="passo">Esporos (n)</div>
+    <div class="seta">&rarr;</div>
+    <div class="passo verde">MITOSE</div>
+    <div class="seta">&rarr;</div>
+    <div class="passo verde">Gametófito (n)</div>
+  </div>
+  <div class="fluxo">
+    <div class="passo verde">Gametófito (n)</div>
+    <div class="seta">&rarr;</div>
+    <div class="passo verde">MITOSE</div>
+    <div class="seta">&rarr;</div>
+    <div class="passo">Gametas (n)</div>
+    <div class="seta">&rarr;</div>
+    <div class="passo roxo">FECUNDAÇÃO</div>
+    <div class="seta">&rarr;</div>
+    <div class="passo">Zigoto (2n)</div>
+    <div class="seta">&rarr;</div>
+    <div class="passo">Esporófito (2n)</div>
+  </div>
+
+  <div class="caixa atencao">
+    <span class="titulo">Pegadinha — qual o tipo de meiose?</span>
+    Nas plantas a meiose é <strong>espórica</strong> (ou intermediária): ela produz <strong>esporos</strong>, e NÃO gametas diretamente. Os gametas surgem depois, por <strong>mitose</strong>, a partir do gametófito. Repare: no ciclo das plantas, <strong>meiose &rarr; esporo</strong> e <strong>mitose &rarr; gameta</strong>. Quem produz gameta por meiose somos nós, animais (meiose gamética) — não as plantas.
+  </div>
+
+  <h3>Quem domina o ciclo? Gametófito x Esporófito</h3>
+  <p>Nas angiospermas, o <strong>esporófito é a fase dominante</strong> (a planta que vemos: a árvore, o arbusto, a erva). O gametófito é reduzidíssimo. O slide compara as duas fases:</p>
+
+  <div class="tabela-wrap">
+  <table>
+    <caption>Comparação: Gametófito x Esporófito nas Angiospermas</caption>
+    <thead>
+      <tr><th>Critério</th><th>Gametófito (n)</th><th>Esporófito (2n)</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="crit">Duração</td><td>Curta duração</td><td>Longa duração</td></tr>
+      <tr><td class="crit">Tamanho</td><td>Extremamente reduzido</td><td>Bem desenvolvido</td></tr>
+      <tr><td class="crit">Independência</td><td>Dependente do esporófito</td><td>Independente (é a planta vista)</td></tr>
+      <tr><td class="crit">Estruturas</td><td>Feminino = 7 células e 8 núcleos; masculino = grão-de-pólen (com exina)</td><td>Raiz, caule, folha, flor e fruto; vascularizado e clorofilado</td></tr>
+      <tr><td class="crit">Reprodução</td><td>Faz sifonogamia e dupla fecundação</td><td>Apresenta endosporia; embrião com 1 ou 2 cotilédones</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="caixa dica">
+    <span class="titulo">Tendência evolutiva das plantas — visão de prova</span>
+    Ao longo da evolução das plantas, há uma <strong>redução progressiva do gametófito</strong> e um <strong>aumento da importância do esporófito</strong>:<br>
+    &bull; Briófitas: gametófito é a fase dominante (o "musgo verde" é o gametófito).<br>
+    &bull; Pteridófitas: já há equilíbrio, mas o esporófito domina.<br>
+    &bull; Gimnospermas e Angiospermas: esporófito amplamente dominante; gametófito microscópico.<br>
+    Quanto mais "moderna" a planta, <strong>menor e mais protegido</strong> é o gametófito — e mais independente da água ela se torna.
+  </div>
+</section>
+
+<!-- ================= COTILÉDONE ================= -->
+<section id="cotiledone">
+  <h2><span class="num">7</span>Cotilédone — a chave da classificação</h2>
+  <p class="intro">A Aula 11 começa a classificar as angiospermas. E o primeiro conceito necessário é o de <strong>cotilédone</strong>, pois é ele que dá nome aos dois grupos principais.</p>
+
+  <div class="caixa def">
+    <span class="titulo">O que é o cotilédone?</span>
+    O cotilédone é uma <strong>folha modificada já presente no embrião</strong> da semente.<br>
+    <strong>Função:</strong> <em>transferir os nutrientes do endosperma para o embrião</em>. Funciona como um "intermediário nutritivo" — uma ponte de alimentação para a plantinha jovem até que ela consiga fazer fotossíntese sozinha.
+  </div>
+
+  <h3>O número de cotilédones separa os grupos</h3>
+  <div class="cards">
+    <div class="card v">
+      <h4>1 cotilédone</h4>
+      <p>Embrião com <strong>um único</strong> cotilédone &rarr; <strong>Monocotiledôneas</strong> (classe Liliopsida). Exemplo: o grão de milho.</p>
+    </div>
+    <div class="card o">
+      <h4>2 cotilédones</h4>
+      <p>Embrião com <strong>dois</strong> cotilédones &rarr; <strong>Eudicotiledôneas</strong> (classe Magnoliopsida). Exemplo: o feijão (suas duas "metades" são os cotilédones).</p>
+    </div>
+  </div>
+
+  <div class="caixa dica">
+    <span class="titulo">Truque para nunca esquecer</span>
+    Pense no <strong>feijão</strong>: quando você abre um grão de feijão demolhado, ele se separa em <strong>duas metades</strong> — são os <strong>dois cotilédones</strong>. Feijão = dicotiledônea. Já o <strong>milho</strong> não se separa em metades — tem <strong>um só</strong> cotilédone = monocotiledônea.
+  </div>
+
+  <p>No diagrama da semente apresentado na aula, aparecem ainda: o <strong>tegumento da semente</strong> (a casca), o <strong>endosperma</strong> (reserva nutritiva), as <strong>folhas primitivas</strong>, o <strong>coleóptilo</strong> (uma bainha protetora típica das gramíneas, monocotiledôneas) e os <strong>meristemas apicais</strong> da raiz e do caule (regiões de crescimento).</p>
+</section>
+
+<!-- ================= CLASSIFICAÇÃO ================= -->
+<section id="classificacao">
+  <h2><span class="num">8</span>Classificação filogenética das Angiospermas</h2>
+  <p class="intro">A Aula 11 mostra um cladograma detalhado <em>dentro</em> das angiospermas (também chamadas <strong>Antófitas</strong>). É importante separar a visão moderna (filogenética) da visão tradicional (mono x dico).</p>
+
+  <h3>Os grupos do cladograma das Angiospermas</h3>
+  <div class="clado">
+    <div class="nivel"><span class="grupo">Amborellaceae</span> <span class="grupo">Nymphaeales</span> <span class="grupo">Austrobaileyales</span> <span class="grupo">Magnoliidae</span> <span class="mini">&rarr; agrupadas tradicionalmente como "Dicotiledôneas basais"</span></div>
+    <div class="nivel"><span class="grupo destaque">Liliopsida</span> <span class="mini">&rarr; as MONOCOTILEDÔNEAS</span></div>
+    <div class="nivel"><span class="grupo">Ceratophyllaceae</span></div>
+    <div class="nivel"><span class="grupo destaque">Eudicotyledoneae</span> <span class="mini">&rarr; as EUDICOTILEDÔNEAS</span></div>
+  </div>
+
+  <div class="caixa def">
+    <span class="titulo">Visão tradicional x visão moderna</span>
+    <strong>Tradicional (didática):</strong> as angiospermas se dividem em <strong>2 grupos</strong> — monocotiledôneas e "dicotiledôneas".<br>
+    <strong>Moderna (filogenética):</strong> as antigas "dicotiledôneas" não formam um grupo natural único. Elas se dividem em:<br>
+    &bull; <strong>Dicotiledôneas basais</strong> (linhagens mais antigas: Amborellaceae, Nymphaeales, Austrobaileyales, Magnoliidae);<br>
+    &bull; <strong>Eudicotiledôneas</strong> (as "verdadeiras dicotiledôneas", a grande maioria).<br>
+    As <strong>monocotiledôneas</strong> (Liliopsida), por sua vez, formam, sim, um grupo natural (monofilético).
+  </div>
+
+  <h3>As proporções — gráfico da aula</h3>
+  <p>O gráfico de pizza da Aula 11 mostra como as espécies de angiospermas se distribuem:</p>
+  <div class="cards">
+    <div class="card o">
+      <h4>Eudicotiledôneas — 75%</h4>
+      <p>A grande maioria das angiospermas. Exemplos: girassol, hibisco, feijão, soja, roseira, árvores em geral.</p>
+    </div>
+    <div class="card v">
+      <h4>Monocotiledôneas — 23%</h4>
+      <p>Grupo numeroso e economicamente importantíssimo. Exemplos: orquídeas, gramíneas, milho, arroz, trigo.</p>
+    </div>
+    <div class="card">
+      <h4>Dicotiledôneas basais — 2%</h4>
+      <p>Pequena fração: linhagens antigas como <em>Amborella</em>, ninfeias e magnólias.</p>
+    </div>
+  </div>
+
+  <div class="caixa atencao">
+    <span class="titulo">Atenção ao termo</span>
+    A aula usa propositalmente <strong>"Eudicotiledôneas"</strong> (com o "Eu-" de "verdadeiro") em vez de só "Dicotiledôneas". Isso acontece porque, na classificação moderna, "dicotiledônea" pura não é um grupo natural. Em prova, se aparecer "eudicotiledônea", saiba que é o grupo das antigas dicotiledôneas de verdade — o que tem dois cotilédones e forma clado.
+  </div>
+</section>
+
+<!-- ================= MONOCOTILEDÔNEAS ================= -->
+<section id="mono">
+  <h2><span class="num">9</span>Monocotiledôneas (Liliopsida)</h2>
+  <p class="intro">Definição central da aula: <strong>embrião com 1 cotilédone</strong>. Mas o número de cotilédones é só a "ponta do iceberg" — o grupo tem um conjunto inteiro de características associadas.</p>
+
+  <h3>Exemplos mostrados na aula</h3>
+  <ul>
+    <li><strong>Gramíneas em geral</strong> — incluindo a <strong>grama de campo de futebol</strong> (a aula ilustra estádios para mostrar a importância das gramíneas).</li>
+    <li><strong>Cereais de imensa importância econômica:</strong> arroz, trigo, milho, sorgo e centeio — alimentam boa parte da humanidade.</li>
+    <li><strong>Lírio</strong> (<em>Lilium</em>) — flor ornamental clássica.</li>
+    <li><strong>Orquídeas</strong> — uma das maiores famílias de plantas do mundo, muito valorizadas no paisagismo.</li>
+  </ul>
+
+  <div class="caixa complemento">
+    <span class="titulo">Complemento para melhor compreensão — as características das monocotiledôneas</span>
+    O slide da aula mostra as monocotiledôneas principalmente por <strong>imagens</strong> (raízes da gramínea, folha de milho, flor de lírio). Para o vestibular, é essencial conhecer o conjunto completo de características que essas imagens representam:
+    <ul>
+      <li><strong>1 cotilédone</strong> no embrião.</li>
+      <li><strong>Raiz fasciculada</strong> (em cabeleira): muitas raízes finas e semelhantes, sem uma raiz principal — visível na foto das raízes da gramínea.</li>
+      <li><strong>Folhas com nervuras paralelas</strong> (paralelinérveas): as nervuras correm lado a lado, como na folha de milho.</li>
+      <li><strong>Flores trímeras</strong>: peças florais em número de 3 ou múltiplos de 3 — como no lírio.</li>
+      <li><strong>Feixes vasculares espalhados</strong> de forma difusa pelo caule.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= EUDICOTILEDÔNEAS ================= -->
+<section id="eudico">
+  <h2><span class="num">10</span>Eudicotiledôneas (Magnoliopsida)</h2>
+  <p class="intro">Definição central da aula: <strong>embrião com dois cotilédones</strong>. É o grupo mais numeroso das angiospermas (cerca de 75% das espécies).</p>
+
+  <h3>Exemplos mostrados na aula</h3>
+  <ul>
+    <li><strong>Leguminosas:</strong> soja e feijão — culturas de enorme valor econômico no Brasil. (No feijão é fácil ver os 2 cotilédones.)</li>
+    <li><strong>Margarida</strong> — flor ornamental.</li>
+    <li><strong>Árvores de grande porte</strong> — incluindo árvores nativas gigantes, o <strong>baobá</strong> (a "alameda dos baobás", de Madagascar) e o <strong>eucalipto</strong> (<em>Eucaliptus</em> sp.), muito usado na construção e na indústria de papel e celulose.</li>
+  </ul>
+
+  <div class="caixa complemento">
+    <span class="titulo">Complemento para melhor compreensão — as características das eudicotiledôneas</span>
+    Assim como nas monocotiledôneas, o slide ilustra o grupo com imagens (raiz, flor de cinco pétalas, folha com nervuras em rede). As características que essas imagens representam são:
+    <ul>
+      <li><strong>2 cotilédones</strong> no embrião.</li>
+      <li><strong>Raiz pivotante (axial)</strong>: uma raiz principal bem desenvolvida, da qual saem raízes laterais menores.</li>
+      <li><strong>Folhas com nervuras reticuladas</strong>: as nervuras se ramificam formando uma "rede".</li>
+      <li><strong>Flores pentâmeras</strong>: peças florais em número de 5 ou múltiplos de 5.</li>
+      <li><strong>Feixes vasculares organizados</strong> em um anel (círculo) no caule.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= TABELA COMPARATIVA ================= -->
+<section id="tabela">
+  <h2><span class="num">11</span>Quadro comparativo: Monocotiledôneas x Eudicotiledôneas</h2>
+  <p class="intro">Esta é, sem exagero, a tabela mais cobrada de toda a botânica do Ensino Médio. Estude-a até conseguir reproduzi-la de memória.</p>
+
+  <div class="caixa complemento">
+    <span class="titulo">Complemento para melhor compreensão</span>
+    A aula apresenta as diferenças por meio de imagens separadas dos dois grupos. O quadro abaixo organiza essas mesmas características lado a lado — é a forma como o vestibular cobra o tema.
+  </div>
+
+  <div class="tabela-wrap">
+  <table>
+    <caption>Diferenças entre os dois grandes grupos de Angiospermas</caption>
+    <thead>
+      <tr><th>Característica</th><th class="mono-col">Monocotiledôneas (Liliopsida)</th><th class="dico-col">Eudicotiledôneas (Magnoliopsida)</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="crit">N&ordm; de cotilédones</td><td class="mono-col"><strong>1</strong> cotilédone</td><td class="dico-col"><strong>2</strong> cotilédones</td></tr>
+      <tr><td class="crit">Raiz</td><td class="mono-col">Fasciculada (em cabeleira)</td><td class="dico-col">Pivotante / axial (raiz principal)</td></tr>
+      <tr><td class="crit">Nervuras da folha</td><td class="mono-col">Paralelas (paralelinérvea)</td><td class="dico-col">Reticuladas (em rede)</td></tr>
+      <tr><td class="crit">Peças florais</td><td class="mono-col">Trímeras (3 ou múltiplos de 3)</td><td class="dico-col">Pentâmeras (5 ou múltiplos de 5)</td></tr>
+      <tr><td class="crit">Feixes vasculares no caule</td><td class="mono-col">Espalhados (difusos)</td><td class="dico-col">Organizados em anel</td></tr>
+      <tr><td class="crit">Exemplos</td><td class="mono-col">Milho, arroz, trigo, capim, lírio, orquídea</td><td class="dico-col">Feijão, soja, girassol, roseira, eucalipto</td></tr>
+      <tr><td class="crit">% das angiospermas</td><td class="mono-col">~23%</td><td class="dico-col">~75%</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="caixa dica">
+    <span class="titulo">Macete dos números</span>
+    Associe cada grupo a um número:<br>
+    &bull; <strong>MONO &rarr; tudo "1" ou "3"</strong>: 1 cotilédone, flores em 3, raiz fasciculada (uniforme), nervuras paralelas.<br>
+    &bull; <strong>EUDICO &rarr; tudo "2" ou "5"</strong>: 2 cotilédones, flores em 5, raiz com 1 eixo principal, nervuras em rede.<br>
+    Repare: quase nada nessas plantas é definido pelo número de cotilédones <em>de verdade</em> — mas, na hora da prova, esse número costuma "andar junto" com o conjunto inteiro de características.
+  </div>
+
+  <div class="caixa atencao">
+    <span class="titulo">Cuidado com exceções</span>
+    A natureza não é perfeitamente arrumada. Existem monocotiledôneas com nervuras que parecem reticuladas (algumas aráceas) e exceções no tipo de raiz. Por isso a classificação moderna usa o <strong>conjunto</strong> de características e dados genéticos — não um traço isolado. Se a questão pedir o critério mais seguro, lembre que a tendência das bancas modernas é valorizar a filogenia (parentesco evolutivo).
+  </div>
+</section>
+
+<!-- ================= ATIVIDADE RESOLVIDA ================= -->
+<section id="atividade">
+  <h2><span class="num">12</span>Atividade resolvida: o Ciclo Reprodutivo das Angiospermas</h2>
+  <p class="intro">A atividade do Capítulo B5 é um esquema do ciclo reprodutivo com 42 estruturas/eventos numerados. Abaixo está o gabarito completo, seguido de uma leitura explicada do ciclo — para você não apenas decorar os nomes, mas <strong>entender a sequência</strong>.</p>
+
+  <h3>Gabarito completo (42 itens)</h3>
+  <div class="gabarito">
+    <div class="item"><b>1</b><span>Esporófito</span></div>
+    <div class="item"><b>2</b><span>Botão floral</span></div>
+    <div class="item"><b>3</b><span>Flor (desabrochada)</span></div>
+    <div class="item"><b>4</b><span>Haste</span></div>
+    <div class="item"><b>5</b><span>Receptáculo</span></div>
+    <div class="item"><b>6</b><span>Sépalas / CÁLICE</span></div>
+    <div class="item"><b>7</b><span>Pétalas / COROLA</span></div>
+    <div class="item"><b>8</b><span>Estames / ANDROCEU</span></div>
+    <div class="item"><b>9</b><span>Carpelo / GINECEU</span></div>
+    <div class="item"><b>10</b><span>ANDROCEU</span></div>
+    <div class="item"><b>11</b><span>Filete</span></div>
+    <div class="item"><b>12</b><span>Antera</span></div>
+    <div class="item"><b>13</b><span>Células-mães de micrósporos (microsporócitos)</span></div>
+    <div class="item"><b>14</b><span>Micrósporos</span></div>
+    <div class="item"><b>15</b><span>Gametófitos masculinos (microgametófitos / grãos-de-pólen)</span></div>
+    <div class="item"><b>16</b><span>&mdash;</span></div>
+    <div class="item"><b>17</b><span>Célula auxiliar (célula do tubo)</span></div>
+    <div class="item"><b>18</b><span>Célula germinativa (geradora)</span></div>
+    <div class="item"><b>19</b><span>Exina</span></div>
+    <div class="item"><b>20</b><span>GINECEU</span></div>
+    <div class="item"><b>21</b><span>Megasporângio</span></div>
+    <div class="item"><b>22</b><span>Ovário</span></div>
+    <div class="item"><b>23</b><span>Estilete</span></div>
+    <div class="item"><b>24</b><span>Estigma</span></div>
+    <div class="item"><b>25</b><span>Célula-mãe de megásporo (megasporócito)</span></div>
+    <div class="item"><b>26</b><span>Megásporo funcional</span></div>
+    <div class="item"><b>27</b><span>Gametófito feminino (megagametófito)</span></div>
+    <div class="item"><b>28</b><span>Oosfera</span></div>
+    <div class="item"><b>29</b><span>Sinérgides</span></div>
+    <div class="item"><b>30</b><span>Antípodas</span></div>
+    <div class="item"><b>31</b><span>Núcleos polares</span></div>
+    <div class="item"><b>32</b><span>Sifonogamia</span></div>
+    <div class="item"><b>33</b><span>Tubo polínico</span></div>
+    <div class="item"><b>34</b><span>Núcleos espermáticos</span></div>
+    <div class="item"><b>35</b><span>Dupla fecundação</span></div>
+    <div class="item"><b>36</b><span>Zigoto</span></div>
+    <div class="item"><b>37</b><span>Endosperma</span></div>
+    <div class="item"><b>38</b><span>Tegumento</span></div>
+    <div class="item"><b>39</b><span>Semente</span></div>
+    <div class="item"><b>40</b><span>Embrião</span></div>
+    <div class="item"><b>41</b><span>Fruto</span></div>
+    <div class="item"><b>42</b><span>Germinação do embrião</span></div>
+  </div>
+  <p class="mini">O item 16 aparece sem resposta no gabarito original — provavelmente um número que não foi utilizado no esquema.</p>
+
+  <h3>Leitura explicada do ciclo (a "história" por trás dos números)</h3>
+
+  <h4>Etapa A — A flor (itens 1 a 9)</h4>
+  <p>O <strong>esporófito (1)</strong> é a planta adulta. Ele produz um <strong>botão floral (2)</strong> que se abre na <strong>flor (3)</strong>, sustentada pela <strong>haste (4)</strong>. A flor se apoia no <strong>receptáculo (5)</strong> e tem quatro verticilos (conjuntos de peças):</p>
+  <div class="tabela-wrap">
+  <table>
+    <caption>Os quatro verticilos florais</caption>
+    <thead><tr><th>Verticilo</th><th>Formado por</th><th>Função</th></tr></thead>
+    <tbody>
+      <tr><td class="crit">Cálice (6)</td><td>Sépalas</td><td>Protege o botão floral</td></tr>
+      <tr><td class="crit">Corola (7)</td><td>Pétalas</td><td>Atrai polinizadores (cor e perfume)</td></tr>
+      <tr><td class="crit">Androceu (8 / 10)</td><td>Estames</td><td>Parte masculina da flor</td></tr>
+      <tr><td class="crit">Gineceu (9 / 20)</td><td>Carpelos</td><td>Parte feminina da flor</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="mini">Macete: andro = "homem" (masculino); gineceu vem de gyno = "mulher" (feminino). Cálice e corola juntos formam o "perianto" — a parte não reprodutiva, de proteção e atração.</p>
+
+  <h4>Etapa B — O lado masculino (itens 10 a 19)</h4>
+  <p>O <strong>androceu (10)</strong> é formado por estames; cada estame tem o <strong>filete (11)</strong> (a "haste") e a <strong>antera (12)</strong> (a parte que produz pólen). Dentro da antera:</p>
+  <div class="fluxo">
+    <div class="passo">Células-mães de micrósporos / microsporócitos (13)</div>
+    <div class="seta">&rarr; MEIOSE &rarr;</div>
+    <div class="passo">Micrósporos (14)</div>
+    <div class="seta">&rarr; MITOSE &rarr;</div>
+    <div class="passo verde">Grãos-de-pólen / microgametófitos (15)</div>
+  </div>
+  <p>Cada grão-de-pólen contém a <strong>célula auxiliar / do tubo (17)</strong> e a <strong>célula germinativa (18)</strong>, tudo envolvido pela parede resistente, a <strong>exina (19)</strong>.</p>
+
+  <h4>Etapa C — O lado feminino (itens 20 a 31)</h4>
+  <p>O <strong>gineceu (20)</strong> é formado por: <strong>estigma (24)</strong> (recebe o pólen, no topo), <strong>estilete (23)</strong> (o "pescoço") e <strong>ovário (22)</strong> (a base, que guarda os óvulos). Dentro do óvulo está o <strong>megasporângio (21)</strong>. Lá dentro:</p>
+  <div class="fluxo">
+    <div class="passo">Célula-mãe de megásporo / megasporócito (25)</div>
+    <div class="seta">&rarr; MEIOSE &rarr;</div>
+    <div class="passo">Megásporo funcional (26)</div>
+    <div class="seta">&rarr; MITOSE &rarr;</div>
+    <div class="passo verde">Gametófito feminino / saco embrionário (27)</div>
+  </div>
+  <p>O saco embrionário maduro contém: <strong>oosfera (28)</strong> — o gameta feminino; <strong>sinérgides (29)</strong>; <strong>antípodas (30)</strong>; e os <strong>núcleos polares (31)</strong> na célula central. (As 7 células e 8 núcleos que estudamos na Seção 5.)</p>
+
+  <h4>Etapa D — Polinização, fecundação e formação da semente (itens 32 a 42)</h4>
+  <p>O grão-de-pólen chega ao estigma e germina, formando o tubo polínico — esse processo é a <strong>sifonogamia (32)</strong>. O <strong>tubo polínico (33)</strong> cresce pelo estilete carregando os <strong>núcleos espermáticos (34)</strong> (os 2 gametas masculinos). Ocorre então a <strong>dupla fecundação (35)</strong>:</p>
+  <div class="fluxo">
+    <div class="passo verde">gameta + oosfera</div>
+    <div class="seta">&rarr;</div>
+    <div class="passo verde">ZIGOTO (36) &rarr; EMBRIÃO (40)</div>
+    <div class="passo roxo">gameta + núcleos polares</div>
+    <div class="seta">&rarr;</div>
+    <div class="passo roxo">ENDOSPERMA (37) — 3n</div>
+  </div>
+  <p>Para fechar o ciclo: o <strong>tegumento (38)</strong> do óvulo vira a casca, formando a <strong>semente (39)</strong>, que contém o embrião e o endosperma. O ovário se desenvolve no <strong>fruto (41)</strong>. Por fim, em condições adequadas, ocorre a <strong>germinação do embrião (42)</strong> — e nasce um novo esporófito, recomeçando o ciclo.</p>
+
+  <div class="caixa prova">
+    <span class="titulo">O que essa atividade treina para a prova</span>
+    Esta atividade cobre, em um único esquema, <strong>todos</strong> os pontos quentes do tema: anatomia da flor, meiose espórica (em dois lugares: antera e óvulo), heterosporia (micrósporo x megásporo), grão-de-pólen e saco embrionário, sifonogamia, dupla fecundação e ploidias. Se você domina este ciclo, domina a botânica de angiospermas do vestibular.
+  </div>
+</section>
+
+<!-- ================= PEGADINHAS ================= -->
+<section id="pegadinhas">
+  <h2><span class="num">13</span>Pontos de atenção, pegadinhas e o que mais cai</h2>
+  <p class="intro">Reunimos aqui os erros mais comuns e os pontos que as bancas mais exploram. Releia esta seção na véspera da prova.</p>
+
+  <h3>Pegadinhas mais frequentes</h3>
+  <div class="caixa atencao">
+    <span class="titulo">1. Ploidia do endosperma: angiosperma x gimnosperma</span>
+    Endosperma da <strong>angiosperma = 3n</strong> (resultado da dupla fecundação). Endosperma da <strong>gimnosperma = n</strong> (é o próprio gametófito feminino, formado SEM fecundação). A banca adora misturar os dois.
+  </div>
+  <div class="caixa atencao">
+    <span class="titulo">2. "7 células e 8 núcleos"</span>
+    O gametófito feminino tem 7 <strong>células</strong>, mas 8 <strong>núcleos</strong> — porque a célula central tem 2 núcleos polares. Não confunda os dois números.
+  </div>
+  <div class="caixa atencao">
+    <span class="titulo">3. Meiose nas plantas é espórica</span>
+    A meiose das plantas produz <strong>esporos</strong>, não gametas. Os gametas surgem depois, por <strong>mitose</strong>. Quem faz meiose gamética somos nós (animais).
+  </div>
+  <div class="caixa atencao">
+    <span class="titulo">4. Fruto x pseudofruto</span>
+    Fruto verdadeiro vem do desenvolvimento do <strong>ovário</strong>. Quando a parte comestível vem de outra estrutura (como o receptáculo, no caso da maçã e do morango), fala-se em <strong>pseudofruto</strong>. (Detalhe que extrapola os slides, mas é muito cobrado.)
+  </div>
+  <div class="caixa atencao">
+    <span class="titulo">5. "Dicotiledônea" x "Eudicotiledônea"</span>
+    Na classificação moderna, "dicotiledônea" não é grupo natural. As angiospermas de dois cotilédones "de verdade" e que formam clado são as <strong>eudicotiledôneas</strong>. As linhagens antigas separadas são as "dicotiledôneas basais".
+  </div>
+  <div class="caixa atencao">
+    <span class="titulo">6. O que torna a angiosperma independente da água</span>
+    A reprodução independente da água é garantida pela <strong>sifonogamia</strong> (tubo polínico) — e não simplesmente "por ter flor". O gameta masculino não precisa nadar no ambiente externo.
+  </div>
+
+  <h3>Os campeões de incidência em vestibular</h3>
+  <ul>
+    <li><strong>Dupla fecundação</strong> e as <strong>ploidias</strong> (embrião 2n, endosperma 3n, tegumento 2n). É o tema nº 1.</li>
+    <li><strong>Anatomia da flor</strong>: identificar cálice, corola, androceu e gineceu — e suas funções.</li>
+    <li><strong>Quadro mono x eudico</strong>: dado um traço (raiz, nervura, flor), classificar a planta.</li>
+    <li><strong>Tendências evolutivas das plantas</strong>: redução do gametófito, conquista do meio terrestre, independência da água.</li>
+    <li><strong>Importância das angiospermas</strong> na alimentação humana e nas relações ecológicas (coevolução flor–polinizador).</li>
+    <li><strong>Diferença angiosperma x gimnosperma</strong>: presença de fruto e de flor; endosperma 3n x n.</li>
+  </ul>
+</section>
+
+<!-- ================= VÍDEOS ================= -->
+<section id="videos">
+  <h2><span class="num">14</span>Vídeos completos no YouTube</h2>
+  <p class="intro">Aulas em vídeo de professores conhecidos entre vestibulandos. Cada botão abre diretamente o vídeo no YouTube.</p>
+
+  <div class="video-grid">
+    <div class="video-card">
+      <span class="canal">Prof. Paulo Jubilut &middot; Biologia Total</span>
+      <span class="vtit">Grupos Vegetais: Briófitas, Pteridófitas, Gimnospermas e Angiospermas</span>
+      <span class="vdesc">Visão geral dos quatro grupos de plantas terrestres e da posição evolutiva das angiospermas — ótimo para fixar a Seção 2 (árvore evolutiva).</span>
+      <a class="btn-video" href="https://www.youtube.com/watch?v=nLRy7t8T0W4" target="_blank" rel="noopener"><span class="play">&#9658;</span> Assistir no YouTube</a>
+    </div>
+
+    <div class="video-card">
+      <span class="canal">Reprodução das Angiospermas</span>
+      <span class="vtit">Reprodução das Angiospermas — Biologia, Ensino Médio</span>
+      <span class="vdesc">Videoaula focada na flor, na polinização, na sifonogamia e na dupla fecundação — apoio direto para as Seções 4, 5 e 12.</span>
+      <a class="btn-video" href="https://www.youtube.com/watch?v=PKKXCBaDucc" target="_blank" rel="noopener"><span class="play">&#9658;</span> Assistir no YouTube</a>
+    </div>
+
+    <div class="video-card">
+      <span class="canal">Prof. Guilherme &middot; Biologia com o Gui</span>
+      <span class="vtit">Monocotiledôneas e Dicotiledôneas — Módulo Botânica</span>
+      <span class="vdesc">Comparação completa dos dois grandes grupos de angiospermas — apoio para as Seções 9, 10 e 11 (quadro comparativo).</span>
+      <a class="btn-video" href="https://www.youtube.com/watch?v=vMlDCrYctPs" target="_blank" rel="noopener"><span class="play">&#9658;</span> Assistir no YouTube</a>
+    </div>
+
+    <div class="video-card">
+      <span class="canal">Prof. Francisco Anselmo &middot; Estudando Biologia</span>
+      <span class="vtit">Diferenças entre Monocotiledôneas e Dicotiledôneas</span>
+      <span class="vdesc">Aula objetiva sobre cotilédones, raiz, folha e flor de cada grupo — reforço prático do quadro comparativo da Seção 11.</span>
+      <a class="btn-video" href="https://www.youtube.com/watch?v=Y17p1ukguFo" target="_blank" rel="noopener"><span class="play">&#9658;</span> Assistir no YouTube</a>
+    </div>
+  </div>
+
+  <div class="caixa dica">
+    <span class="titulo">Observação sobre os links</span>
+    Os endereços acima foram verificados na elaboração deste material e levam diretamente a cada vídeo no YouTube. Ainda assim, plataformas de vídeo mudam com o tempo: se algum link estiver indisponível no futuro, procure pelo título exato no canal do professor indicado.
+  </div>
+</section>
+
+<!-- ================= REVISÃO FINAL ================= -->
+<section id="revisao">
+  <h2><span class="num">15</span>Revisão final — os conceitos essenciais</h2>
+  <p class="intro">Se você tiver pouco tempo antes da prova, leia apenas estes cartões. Eles concentram o que é indispensável.</p>
+
+  <div class="revisao">
+    <div class="flash"><b>Angiospermas</b><span>Plantas com flor e fruto. Grupo monofilético (Magnoliophyta/Antophyta). As plantas mais diversas e bem-sucedidas.</span></div>
+    <div class="flash"><b>Embriófitas</b><span>Plantas terrestres que formam embrião multicelular: briófitas, pteridófitas, gimnospermas e angiospermas.</span></div>
+    <div class="flash"><b>Novidades evolutivas</b><span>Em ordem: embrião &rarr; vasos condutores &rarr; semente e grão-de-pólen &rarr; flor e fruto.</span></div>
+    <div class="flash"><b>Flor e fruto</b><span>Flor atrai polinizadores; fruto (vem do ovário) protege e dispersa a semente.</span></div>
+    <div class="flash"><b>Sifonogamia</b><span>Fecundação via tubo polínico. Torna a reprodução independente da água.</span></div>
+    <div class="flash"><b>Heterosporia</b><span>Dois tipos de esporo: micrósporo (&rarr; pólen) e megásporo (&rarr; saco embrionário).</span></div>
+    <div class="flash"><b>Gametófito masculino</b><span>O grão-de-pólen, com parede resistente (exina), célula do tubo e célula geradora.</span></div>
+    <div class="flash"><b>Gametófito feminino</b><span>Saco embrionário: 7 células e 8 núcleos (oosfera, 2 sinérgides, 3 antípodas, célula central com 2 núcleos polares).</span></div>
+    <div class="flash"><b>Dupla fecundação</b><span>Exclusiva das angiospermas. Gameta+oosfera = zigoto (2n). Gameta+2 núcleos polares = endosperma (3n).</span></div>
+    <div class="flash"><b>Ploidias da semente</b><span>Embrião 2n &middot; Endosperma 3n &middot; Tegumento/casca 2n.</span></div>
+    <div class="flash"><b>Ciclo de vida</b><span>Haplodiplobionte. Meiose espórica (&rarr; esporos). Esporófito (2n) dominante; gametófito (n) reduzido.</span></div>
+    <div class="flash"><b>Cotilédone</b><span>Folha do embrião que transfere nutrientes do endosperma para o embrião.</span></div>
+    <div class="flash"><b>Monocotiledôneas</b><span>1 cotilédone, raiz fasciculada, nervuras paralelas, flores trímeras. ~23%. Ex.: milho, arroz, orquídea.</span></div>
+    <div class="flash"><b>Eudicotiledôneas</b><span>2 cotilédones, raiz pivotante, nervuras reticuladas, flores pentâmeras. ~75%. Ex.: feijão, soja, eucalipto.</span></div>
+    <div class="flash"><b>Verticilos florais</b><span>Cálice (sépalas), corola (pétalas), androceu (estames), gineceu (carpelos).</span></div>
+    <div class="flash"><b>Angiosperma x Gimnosperma</b><span>Angiosperma tem flor e fruto; endosperma 3n. Gimnosperma tem semente nua; endosperma n.</span></div>
+  </div>
+
+  <hr class="divisor">
+  <div class="caixa def">
+    <span class="titulo">Fechamento</span>
+    Você percorreu a história evolutiva das plantas até o topo, entendeu por que as angiospermas dominaram a Terra, dominou o ciclo reprodutivo estrutura por estrutura e aprendeu a separar monocotiledôneas de eudicotiledôneas. Esse é exatamente o recorte que os vestibulares mais concorridos cobram em Botânica. Bons estudos!
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <p><strong>Angiospermas</strong> &mdash; Aula completa de Biologia &middot; Capítulo B5 (Aulas 10 e 11) e atividade do Ciclo Reprodutivo.</p>
+  <p>Material de estudo organizado a partir do conteúdo das apresentações. Conteúdos marcados como "Complemento para melhor compreensão" foram acrescentados para garantir o entendimento total do tema.</p>
+</footer>
+
+</body>
+</html>
